@@ -465,7 +465,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (../Core/Inc/adc.h)(0x69E4C9B7)
 I (../Core/Inc/usart.h)(0x69EF7B6D)
 I (../Core/Inc/gpio.h)(0x69E21997)
-F (../Core/Src/usart.c)(0x69EF7C18)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SOFTWARE-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G030xx-o software\usart.o --omf_browse software\usart.crf --depend software\usart.d)
+F (../Core/Src/usart.c)(0x69FDCE7C)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SOFTWARE-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G030xx-o software\usart.o --omf_browse software\usart.crf --depend software\usart.d)
 I (../Core/Inc/usart.h)(0x69EF7B6D)
 I (../Core/Inc/main.h)(0x69F219F3)
 I (../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h)(0x69D3A6FF)

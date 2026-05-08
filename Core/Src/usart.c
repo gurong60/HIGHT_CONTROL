@@ -298,6 +298,7 @@ void RS232_Process(uint8_t size)
 								Set_PWM_En(1,true);
 								Set_PWM_En(2,true);
 								Set_PWM_En(3,true);
+
 						}
 						else if(g_params.work_mode==1)
 						{
@@ -333,6 +334,7 @@ void RS232_Process(uint8_t size)
 								{
 										Set_PWM_En(3,false);
 								}
+
 						}
 						else
 						{
@@ -341,7 +343,8 @@ void RS232_Process(uint8_t size)
 								Set_PWM_En(2,false);
 								Set_PWM_En(3,false);
 						}
-	
+													CH455G_DisplayUpdate(DISP_CHANNEL_1, 0,
+																		g_params.pulse_width[0]);
         } else {
             // 模式错误，回复错误
             UART_Send("ERRSLV#");
@@ -368,6 +371,8 @@ void RS232_Process(uint8_t size)
     if (rx_buf[0] == 'T' && rx_buf[1] == 'R' && rx_buf[2] == 'I') {
         // 提取通道号
         uint8_t ch = rx_buf[3] - '0';
+				if(g_params.work_mode == MODE_ALWAYS_ON)
+					{
         // 设置单路脉冲宽度
         if (ch >= 1 && ch <= 4) {
             // 提取3位脉冲宽度值
@@ -418,6 +423,10 @@ void RS232_Process(uint8_t size)
         } else {
             UART_Send("ERRTRI#");
         }
+			}
+					else{
+						 UART_Send("ERRTRI#");
+					}
         rx_buf[0] = '\0';
         return;
     }
@@ -455,6 +464,8 @@ void RS232_Process(uint8_t size)
                 g_params.pulse_width[i] = v;
             }
             if (ok) {
+							CH455G_DisplayUpdate(DISP_PULSE_WIDTH, ch,
+																		g_params.pulse_width[ch]);
                 UART_Send("SPW0#");
                 Params_RequestSave();
             } else {
